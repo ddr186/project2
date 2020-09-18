@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-          
+
     <%- include('../views/partials/head.ejs')%>
     </head>
 
@@ -17,6 +17,7 @@
                         <%=blog[i].title%>
 
                     </a>
+                    <p><%=blog[i].entry%></p>
                       <form action="/blogs/<%=blog[i].id%>?_method=DELETE" method="POST">
                           <input type="submit" value="DELETE"/>
                       </form>
