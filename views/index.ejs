@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <%- include('../views/partials/head.ejs')%>
   </head>
   <body>
+
     <div class="container">
+      <h1 class="mb-4">Blog Index Page</h1>
+      <a href="/blogs/new" class="btn btn-success">New Blog</a>
       <ul>
               <% for(let i = 0; i < blog.length; i++) { %>
                   <li>
