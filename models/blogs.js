@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
 
-const blogSchema = new mongoose.Schema({
-  
-    article: String,
-    entry: String,
+const blogSchema = new mongoose.Schema(
+  {
+
+    article: {type: String},
+    entry: {type: String},
 
   }
 );

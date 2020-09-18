@@ -38,18 +38,18 @@ router.get('/new', (req, res) => {
 router.get('/seed', (req, res) => {
     Blog.create(
         [{
-                date: 'nuclear reactor',
-                post: 'reactor malfunction, Data threw himself in it',
+                article: 'nuclear reactor',
+                entry: 'reactor malfunction, Data threw himself in it',
 
             },
             {
-                date: 'computer system',
-                post: 'spawk threw up on the computers',
+                article: 'computer system',
+                entry: 'spawk threw up on the computers',
 
             },
             {
-                date: 'wings',
-                post: 'hit a rough patch of asteroids',
+                article: 'wings',
+                entry: 'hit a rough patch of asteroids',
 
             }
         ],
