@@ -1,0 +1,9 @@
+body {
+  background-image: url('https://static.vibe.com/files/article_images/prison-break-compressed.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background-position: center;
+  background-attachment: fixed;
+}
