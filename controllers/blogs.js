@@ -1,6 +1,7 @@
 const express = require('express')
 const Blog = require('../models/blogs.js')
 const router = express.Router()
+const faker = require('faker')
 
 
 router.delete('/:id', (req, res) => {
@@ -38,21 +39,21 @@ router.get('/new', (req, res) => {
 router.get('/seed', (req, res) => {
     Blog.create(
         [{
-                title: 'nuclear reactor',
+                title: faker.lorem.words(),
                 date: '2020-08-02',
-                entry: 'reactor malfunction, Data threw himself in it',
+                entry: faker.lorem.paragraphs(),
 
             },
             {
-                title: 'computer system',
-                date: '2020-08-02',
-                entry: 'spawk threw up on the computers',
+              title: faker.lorem.words(),
+              date: '2020-08-02',
+              entry: faker.lorem.paragraphs(),
 
             },
             {
-                title: 'wings',
-                date: '2020-08-02',
-                entry: 'hit a rough patch of asteroids',
+              title: faker.lorem.words(),
+              date: '2020-08-02',
+              entry: faker.lorem.paragraphs(),
 
             }
         ],

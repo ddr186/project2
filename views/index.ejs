@@ -10,21 +10,24 @@
     <div class="container">
       <h1 class="mb-4">Blog Index Page</h1>
       <a href="/blogs/new" class="btn btn-success">New Blog</a>
-      <ul>
-              <% for(let i = 0; i < blog.length; i++) { %>
-                  <li>
-                    <a href="/blogs/<%=blog[i].id%>">
-                        <%=blog[i].title%>
+      <div class="cards-container">
 
-                    </a>
-                    <p><%=blog[i].entry%></p>
-                      <form action="/blogs/<%=blog[i].id%>?_method=DELETE" method="POST">
-                          <input type="submit" value="DELETE"/>
-                      </form>
-                      <a href="/blogs/<%=blog[i].id%>/edit">EDIT</a>
-                  </li>
+              <% for(let i = 0; i < blog.length; i++) { %>
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        <a href="/blogs/<%=blog[i].id%>">
+                            <%=blog[i].title%>
+                        </a>
+                      </h5>
+                      <h6 class="card-subtitle mb-2 text-muted"><%=blog[i].date%></h6>
+                      <p class="card-text"><%=blog[i].entry.slice(0,50)%>...</p>
+                    </div>
+                  </div>
+
               <% } %>
-          </ul>
+
+      </div>
   </div>
   </body>
 </html>
