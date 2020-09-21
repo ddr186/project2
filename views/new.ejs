@@ -2,9 +2,30 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+      <%- include('../views/partials/head.ejs')%>
   </head>
   <body>
-    <h1>Create a new Blog</h1>
-  </body>
+
+  <div class="body-overlay">
+    <h1>New Blog</h1><br/>
+    <main class="show-main">
+      <div class= "date">
+      <form>
+
+
+        <input type="datetime-local" placeholder="date"><br/>
+
+        <h4>Title</h4>
+
+        <input type="text-box search" placeholder="title"><br/>
+        <input type="text" placeholder="entry"><br/>
+      </form>
+      </div>
+    </main>
+  </div>
+
+</body>
+<div>
+  <a href="/blogs" class="btn btn-success">Back</a>
+</div>
 </html>

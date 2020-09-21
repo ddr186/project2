@@ -2,12 +2,26 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+
+    <%- include('../views/partials/head.ejs')%>
+
   </head>
   <body>
     <h1>Blog Edit</h1>
 
-  
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="/blogs/<%=blog.id%>">
+                <%=blog.title%>
+            </a>
+          </h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%=blog.date%></h6>
+          <p class="card-text"><%=blog.entry.slice(0,50)%>...</p>
+          <br>
+          <br>
+          <br>
+          <a href="/blogs/<%=blog._id%>/edit">Edit</a>
 
   </body>
 </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <%- include('../views/partials/head.ejs')%>
+  </head>
+  <body>
+    <br>
+    <br>
+    <br>
+    <form action="/blogs/<%=blog.id%>?_method=PUT" method="POST">
+          Date: <input type="text" name="date" value="<%=blog.date%>"/><br/>
+          title: <input type="text-box" name="title" value="<%=blog.title%>"/><br/>
+          entry: <input type="text-box" name="entry" value="<%=blog.entry%>"/>
+          <input type="submit" value="Submit Changes" />
+      </form>
+  </body>
+</html>

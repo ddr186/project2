@@ -13,11 +13,18 @@ router.delete('/:id', (req, res) => {
 router.get('/:id/edit', (req, res) => {
   Blog.findById(req.params.id, (error, foundBlog) => {
     res.render('edit.ejs', {
-      log: foundBlog
+      blog: foundBlog
       // ,currentUser: req.session.currentUser
     })
   })
 
+})
+
+
+router.post('/', (req, res) => {
+    Blog.create(req.body, (error, createBlog) => {
+        res.redirect('/blogs/')
+    })
 })
 
 router.put('/:id', (req, res) => {
@@ -64,11 +71,11 @@ router.get('/seed', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    Blog.findById(req.params.id, (error, foundLog) => {
+    Blog.findById(req.params.id, (error, foundBlog) => {
         res.render(
             'show.ejs',
             {
-                blog:foundLog
+                blog:foundBlog
                 // ,currentUser: req.session.currentUser
             }
         );
