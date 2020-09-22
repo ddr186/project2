@@ -8,6 +8,8 @@ const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
 const blogsController = require('./controllers/blogs.js')
+// const usersController = require('./controllers/users_controller.js')
+// const sessionsController = require('./controllers/sessions_controller.js')
 //___________________
 //Port
 //___________________
@@ -32,9 +34,18 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 //use public folder for static assets
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
+// app.use(
+//   session({
+//     secret: process.env.SECRET,
+//     resave: false,
+//     saveUninitialized: false
+//   })
+// )
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use('/blogs', blogsController)
+// app.use('/users', usersController)
+// app.use('/sessions', sessionsController)
 //___________________
 // Routes
 //___________________

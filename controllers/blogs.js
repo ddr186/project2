@@ -38,17 +38,15 @@ router.put('/:id', (req, res) => {
 })
 
 router.get('/new', (req, res) => {
-  res.render('new.ejs',
-  // {currentUser: req.session.currentUser}
-  )
+  res.render('new.ejs')
 })
 
 router.get('/seed', (req, res) => {
     Blog.create(
         [{
-                title: faker.lorem.words(),
-                date: '2020-08-02',
-                entry: faker.lorem.paragraphs(),
+              title: faker.lorem.words(),
+              date: '2020-08-02',
+              entry: faker.lorem.paragraphs(),
 
             },
             {
@@ -75,7 +73,7 @@ router.get('/:id', (req, res) => {
         res.render(
             'show.ejs',
             {
-                blog:foundBlog
+                blog: foundBlog
                 // ,currentUser: req.session.currentUser
             }
         );

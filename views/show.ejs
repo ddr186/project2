@@ -7,21 +7,30 @@
 
   </head>
   <body>
-    <h1>Blog Edit</h1>
+    <h1>Blog Show</h1>
+    <a href="/blogs" class="btn btn-success">Back</a>
 
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">
-            <a href="/blogs/<%=blog.id%>">
+
                 <%=blog.title%>
-            </a>
+
           </h5>
           <h6 class="card-subtitle mb-2 text-muted"><%=blog.date%></h6>
           <p class="card-text"><%=blog.entry.slice(0,50)%>...</p>
           <br>
           <br>
           <br>
-          <a href="/blogs/<%=blog._id%>/edit">Edit</a>
+          <a href="/blogs/<%=blog._id%>/edit">Edit</a><br>
+
+          <br>
+          <br>
+          <br>
+          <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+            <a href="/blogs" class="btn btn-success">Delete</a>
+          </form>
 
   </body>
+
 </html>
