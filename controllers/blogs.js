@@ -14,7 +14,7 @@ router.get('/:id/edit', (req, res) => {
   Blog.findById(req.params.id, (error, foundBlog) => {
     res.render('edit.ejs', {
       blog: foundBlog
-      // ,currentUser: req.session.currentUser
+
     })
   })
 
@@ -23,7 +23,7 @@ router.get('/:id/edit', (req, res) => {
 
 router.post('/', (req, res) => {
     Blog.create(req.body, (error, createBlog) => {
-        res.redirect('/blogs/')
+        res.redirect('/blogs')
     })
 })
 
@@ -74,7 +74,7 @@ router.get('/:id', (req, res) => {
             'show.ejs',
             {
                 blog: foundBlog
-                // ,currentUser: req.session.currentUser
+
             }
         );
     })

@@ -12,11 +12,8 @@
 
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">
-
-                <%=blog.title%>
-
-          </h5>
+          <h5 class="card-title"></h5>
+          <%=blog.title%>
           <h6 class="card-subtitle mb-2 text-muted"><%=blog.date%></h6>
           <p class="card-text"><%=blog.entry.slice(0,50)%>...</p>
           <br>
@@ -28,7 +25,7 @@
           <br>
           <br>
           <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
-            <a href="/blogs" class="btn btn-success">Delete</a>
+            <input type="submit"  value="DELETE">
           </form>
 
   </body>

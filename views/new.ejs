@@ -10,20 +10,20 @@
     <h1>New Blog</h1><br/>
     <main class="show-main">
       <div class= "date">
-      <form>
+
+        <form action="/blogs" method="POST">
+          <input type="submit" name="id" value="Create New Blog"/>
 
 
-        <input type="datetime-local" placeholder="date"><br/>
+          <input type="datetime-local" name= "date" placeholder="date"><br/>
 
-        <h4>Title</h4>
+          <h4>Title</h4>
 
-        <input type="text-box search" placeholder="title"><br/>
-        <input type="text" placeholder="entry"><br/>
+          <input type="text-box search" name="title" placeholder="title"><br/>
+          <input type="text" name="entry" placeholder="entry"><br/>
       </form>
       </div>
-      <form action="/blogs" method="POST">
-          <input type="submit" value="Create New Blog"/>
-      </form>
+
     </main>
   </div>
 
