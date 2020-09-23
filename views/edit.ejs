@@ -4,16 +4,20 @@
     <meta charset="utf-8">
     <%- include('../views/partials/head.ejs')%>
   </head>
-  <body>
+  <body class="container">
+    <div>
+      <h1>Let's fix this...</h1>
+    </div>
     <br>
     <br>
     <br>
     <form action="/blogs/<%=blog.id%>?_method=PUT" method="POST">
           Date: <input type="text" name="date" value="<%=blog.date%>"/><br/>
           title: <input type="text-box" name="title" value="<%=blog.title%>"/><br/>
-          entry: <input type="text-box" name="entry" value="<%=blog.entry%>"/>
+          entry: <textarea class="textarea-edit" name="name" rows="8" cols="80" name="entry" value="<%=blog.entry%>"> </textarea>
           <input type="submit" value="Submit Changes" />
       </form>
       <a href="/blogs" class="btn btn-success">Back</a>
+    </div>
   </body>
 </html>

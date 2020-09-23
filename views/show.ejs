@@ -6,8 +6,11 @@
     <%- include('../views/partials/head.ejs')%>
 
   </head>
-  <body>
-    <h1>Blog Show</h1>
+  <body class="container">
+    <div>
+
+
+    <h1>Here it is...</h1>
     <a href="/blogs" class="btn btn-success">Back</a>
 
       <div class="card" style="width: 18rem;">
@@ -15,7 +18,7 @@
           <h5 class="card-title"></h5>
           <%=blog.title%>
           <h6 class="card-subtitle mb-2 text-muted"><%=blog.date%></h6>
-          <p class="card-text"><%=blog.entry.slice(0,50)%>...</p>
+          <p class="card-text"><%=blog.entry%>...</p>
           <br>
           <br>
           <br>
@@ -27,7 +30,7 @@
           <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
             <input type="submit"  value="DELETE">
           </form>
-
+    </div>
   </body>
 
 </html>

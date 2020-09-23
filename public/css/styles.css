@@ -1,5 +1,21 @@
 body {
-  background-image: url('https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/56260441_1864857020285949_3315803997637443584_o.jpg?_nc_cat=101&_nc_sid=9267fe&_nc_ohc=hUUVAuPbluAAX_pEgFZ&_nc_ht=scontent.fapa1-1.fna&oh=5d3711aa53989313636e071b488e06d4&oe=5F8C471F');
+  margin: 0;
+  padding: 0;
+
+}
+
+.btn.btn-rounded {
+    border-radius: 50px
+}
+
+.enter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.container {
+  background-image: url('https://scontent.fapa1-2.fna.fbcdn.net/v/t1.0-9/20953504_1537483529627868_1846907577035768745_n.jpg?_nc_cat=107&_nc_sid=730e14&_nc_ohc=3JVS7Dz3gLQAX9oObsS&_nc_ht=scontent.fapa1-2.fna&oh=1cb724cb7a04d8f9e55468ab9fc98af8&oe=5F8FFF67');
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -7,26 +23,40 @@ body {
   background-position: center;
   background-attachment: fixed;
   font-family: 'Taviraj', serif;
+  width: 100%;
+
 }
 
-.btn.btn-rounded {
-    border-radius: 50px
-}
+.splash-container {
+  background-image: url('https://scontent.fapa1-2.fna.fbcdn.net/v/t1.0-9/401901_514957988569634_592711028_n.jpg?_nc_cat=105&_nc_sid=cdbe9c&_nc_ohc=7BaJPnwJeKoAX9S546_&_nc_ht=scontent.fapa1-2.fna&oh=cbc0868c3a6832bbed54952c2fc226b2&oe=5F903D8B');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background-position: center;
+  background-attachment: fixed;
 
-.container {
-    margin-top: 100px
 }
 
 .date {
   float: left;
   width: 300px;
+  text: white;
 
+}
+
+input[type="text"] {
+  color: white;
 }
 
 form {
   display: flex;
   flex-wrap: wrap;
 
+}
+
+h1  {
+  color: white;
 }
 
 .body-overlay {
@@ -54,4 +84,9 @@ form {
   display: flex;
   flex-wrap: wrap;
 
+}
+
+.textarea-edit {
+  background-color: white;
+  width: 300px;
 }

@@ -4,28 +4,31 @@
     <meta charset="utf-8">
       <%- include('../views/partials/head.ejs')%>
   </head>
-  <body>
-
-  <div class="body-overlay">
-    <h1>New Post</h1><br/>
-    <main class="show-main">
-      <div class= "date">
+  <body class="container">
+    <div>
 
 
-        <form action="/blogs" method="POST">
-          <input type="datetime-local" name= "date" placeholder="date"><br/>
-          <input type="text" name="title" placeholder="title"><br/>
-          <input type="text-box" name="entry" placeholder="entry"><br/>
-          <input type="submit" name="id" value="Create New Blog"/>
 
-      </form>
-      <a href="/blogs/" class="btn btn-success">Back</a>
-      </div>
+      <div class="body-overlay">
+        <h1>How far does your tunnel go?</h1><br/>
+        <main class="show-main">
+          <div class= "date">
 
-    </main>
 
-  </div>
+            <form action="/blogs" method="POST">
+              <input type="datetime-local" name= "date" placeholder="date"><br/>
+              <input type="text" name="title" placeholder="title"><br/>
+              <textarea class="textarea-edit" name="name" rows="8" cols="80" name="entry" value="entry"> </textarea><br/>
+              <input type="submit" name="id" value="Create New Blog"/>
 
+          </form>
+          <a href="/blogs/" class="btn btn-success">Back</a>
+          </div>
+
+        </main>
+
+    </div>
+</div>
 </body>
 
 </html>

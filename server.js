@@ -54,6 +54,9 @@ app.get('/blogs', (req, res) => {
     res.render('index.ejs');
 });
 
+app.get('/', (req, res) => {
+  res.render('splash.ejs');
+})
 
 //___________________
 //Listener
